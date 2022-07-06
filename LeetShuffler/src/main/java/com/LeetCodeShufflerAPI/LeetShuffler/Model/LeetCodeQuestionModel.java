@@ -21,4 +21,7 @@ public class LeetCodeQuestionModel {
     private String difficulty;
     private String tag;
 
+    public String getName() {
+        return name;
+    }
 }
