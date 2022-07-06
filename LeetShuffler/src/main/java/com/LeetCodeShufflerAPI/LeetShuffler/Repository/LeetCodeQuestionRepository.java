@@ -7,4 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 public interface LeetCodeQuestionRepository extends JpaRepository<LeetCodeQuestionModel, Long> {
     @Query(value="SELECT * FROM question ORDER BY RAND() LIMIT 1", nativeQuery = true)
     LeetCodeQuestionModel getRandomQuestion();
+
+
+    LeetCodeQuestionModel findByName(String name);
+
 }
